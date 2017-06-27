@@ -18,4 +18,9 @@ public class CalculatorTest {
     public void input_string_1__return_1() {
         assertEquals(1, calculator.calculate("1"));
     }
+
+    @Test
+    public void input_string_1_comma_2_return_3() {
+        assertEquals(3, calculator.calculate("1,2"));
+    }
 }
