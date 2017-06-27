@@ -13,4 +13,10 @@ public class CalculatorTest {
         Calculator calculator = new Calculator();
         assertEquals(0, calculator.calculate(""));
     }
+
+    @Test
+    public void input_string_1__return_1() {
+        Calculator calculator = new Calculator();
+        assertEquals(1, calculator.calculate("1"));
+    }
 }
