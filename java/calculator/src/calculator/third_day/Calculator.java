@@ -11,10 +11,14 @@ public class Calculator {
         if (s.isEmpty())
             return 0;
 
-        if (s.contains(DELIMITER))
+        if (isContainDelimiter(s))
             return getSumWithDelimiter(s);
 
         return Integer.parseInt(s);
+    }
+
+    private boolean isContainDelimiter(String s) {
+        return s.contains(DELIMITER);
     }
 
     private int getSumWithDelimiter(String s) {
