@@ -6,7 +6,12 @@ import java.util.Arrays;
  * Created by chengwei on 2017/6/27.
  */
 public class Calculator {
-    private static final String DELIMITER = ",";
+    private String[] delimiters;
+
+    public Calculator() {
+        delimiters = new String[]{",", "\n"};
+    }
+
     public int calculate(String s) {
         if (s.isEmpty())
             return 0;
@@ -17,8 +22,12 @@ public class Calculator {
         return Integer.parseInt(s);
     }
 
+    private String getDelimiter() {
+        return "[" + Arrays.toString(delimiters) + "]";
+    }
+
     private boolean isContainDelimiter(String s) {
-        return s.contains(DELIMITER);
+        return s.matches(".*(" + getDelimiter() + ").*");
     }
 
     private int getSumWithDelimiter(String s) {
@@ -30,7 +39,7 @@ public class Calculator {
     }
 
     private String[] splitStringToStringArray(String s) {
-        return s.split(DELIMITER);
+        return s.split(getDelimiter());
     }
 
 }
