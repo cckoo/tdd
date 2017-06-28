@@ -13,7 +13,11 @@ public class StringOperator {
         return Arrays.stream(splitStringByDelimiter(s)).mapToInt(Integer::parseInt).toArray();
     }
 
-    static public String[] splitStringByDelimiter(String s) {
+    private static String[] splitStringByDelimiter(String s) {
         return s.split(DELIMITER);
+    }
+
+    static public boolean hasContainsDelimiter(String s) {
+        return s.contains(DELIMITER);
     }
 }

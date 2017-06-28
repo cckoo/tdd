@@ -9,13 +9,13 @@ import java.util.Arrays;
  */
 public class Calculator {
 
-    private static final String DELIMITER = ",";
+
 
     public int calculate(String s) {
         if (s.isEmpty())
             return 0;
 
-        if (hasContainsDelimiter(s))
+        if (StringOperator.hasContainsDelimiter(s))
             return getSum(StringOperator.getNums(s));
 
         return Integer.parseInt(s);
@@ -23,9 +23,5 @@ public class Calculator {
 
     private int getSum(int[] nums) {
         return Arrays.stream(nums).sum();
-    }
-
-    private boolean hasContainsDelimiter(String s) {
-        return s.contains(DELIMITER);
     }
 }
