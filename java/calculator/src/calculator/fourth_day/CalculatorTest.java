@@ -23,4 +23,9 @@ public class CalculatorTest {
     public void input_string_1_comma_2_return_3() {
         assertEquals(3, calculator.calculate("1,2"));
     }
+
+    @Test
+    public void input_string_1_newline_2_return_3() {
+        assertEquals(3, calculator.calculate("1\n2"));
+    }
 }
