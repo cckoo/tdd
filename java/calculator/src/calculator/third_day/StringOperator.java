@@ -7,7 +7,7 @@ import java.util.Arrays;
  */
 public class StringOperator {
 
-    private static final String DELIMITER = ",|\n";
+    private static final String DELIMITER = "[,\n]";
 
     static public int[] getNums(String s) {
         return Arrays.stream(splitStringByDelimiter(s)).mapToInt(Integer::parseInt).toArray();
