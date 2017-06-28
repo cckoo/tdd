@@ -20,4 +20,8 @@ public class StringOperator {
     static public boolean hasContainsDelimiter(String s) {
         return s.matches(".*(" + DELIMITER + ").*");
     }
+
+    static public int getNumWithStringNum(String num) {
+        return Integer.parseInt(num);
+    }
 }

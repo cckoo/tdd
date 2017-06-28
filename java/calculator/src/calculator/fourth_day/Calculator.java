@@ -16,7 +16,7 @@ public class Calculator {
         if (StringOperator.hasContainsDelimiter(s))
             return getSum(StringOperator.getNums(s));
 
-        return Integer.parseInt(s);
+        return StringOperator.getNumWithStringNum(s);
     }
 
     private int getSum(int[] nums) {
