@@ -7,7 +7,7 @@ import java.util.Arrays;
  */
 public class StringOperator {
 
-    private static final String DELIMITER = ",";
+    private static final String DELIMITER = ",|\n";
 
     static public int[] getNums(String s) {
         return Arrays.stream(splitStringByDelimiter(s)).mapToInt(Integer::parseInt).toArray();
@@ -18,6 +18,6 @@ public class StringOperator {
     }
 
     static public boolean hasContainsDelimiter(String s) {
-        return s.contains(DELIMITER);
+        return s.matches(".*(" + DELIMITER + ").*");
     }
 }
