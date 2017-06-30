@@ -6,12 +6,15 @@ import java.util.Arrays;
  * Created by chengwei on 2017/6/30.
  */
 public class StringOperator {
+
+    public static final String DELIMITER = ",";
+
     static public Boolean hasDelimiter(String s) {
-        return s.contains(",");
+        return s.contains(DELIMITER);
     }
 
-    static public String[] splitStringWithDelimiter(String s) {
-        return s.split(",");
+    private static String[] splitStringWithDelimiter(String s) {
+        return s.split(DELIMITER);
     }
 
     static public int[] getNums(String s) {

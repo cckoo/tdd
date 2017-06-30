@@ -10,8 +10,7 @@ public class Calculator {
         if (s.isEmpty())
             return 0;
         if (StringOperator.hasDelimiter(s)) {
-            int[] nums = StringOperator.getNums(s);
-            return Arrays.stream(nums).sum();
+            return Arrays.stream(StringOperator.getNums(s)).sum();
         }
         return Integer.parseInt(s);
     }
