@@ -7,7 +7,7 @@ import java.util.Arrays;
  */
 public class StringOperator {
 
-    public static final String DELIMITER = ",|\n";
+    public static final String DELIMITER = "[,\n]";
 
     static public Boolean hasDelimiter(String s) {
         return s.matches(".*(" + DELIMITER + ").*");
