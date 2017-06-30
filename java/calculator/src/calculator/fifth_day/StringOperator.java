@@ -7,4 +7,8 @@ public class StringOperator {
     static public Boolean hasDelimiter(String s) {
         return s.contains(",");
     }
+
+    static public String[] splitStringWithDelimiter(String s) {
+        return s.split(",");
+    }
 }
