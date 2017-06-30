@@ -7,10 +7,10 @@ import java.util.Arrays;
  */
 public class StringOperator {
 
-    public static final String DELIMITER = ",";
+    public static final String DELIMITER = ",|\n";
 
     static public Boolean hasDelimiter(String s) {
-        return s.contains(DELIMITER);
+        return s.matches(".*(" + DELIMITER + ").*");
     }
 
     private static String[] splitStringWithDelimiter(String s) {
