@@ -9,7 +9,7 @@ public class Calculator {
     public int calculate(String s) {
         if (s.isEmpty())
             return 0;
-        if (s.contains(",")) {
+        if (StringOperator.hasDelimiter(s)) {
             String[] stringNums = s.split(",");
             int[] nums = Arrays.stream(stringNums).mapToInt(Integer::parseInt).toArray();
             return Arrays.stream(nums).sum();
